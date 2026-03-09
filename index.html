@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrawApp Pro – Joonistamine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="toolbar">
+        <div class="logo">🎨 DrawApp</div>
+        
+        <div class="controls">
+            <div class="control-item">
+                <label for="colorPicker">Värv:</label>
+                <input type="color" id="colorPicker" value="#6366f1">
+            </div>
+            
+            <div class="control-item">
+                <label for="lineWidth">Paksus:</label>
+                <input type="range" id="lineWidth" min="1" max="50" value="8">
+            </div>
+
+            <div class="actions">
+                <button id="clearCanvas" class="btn-secondary" title="Puhasta lõuend">Puhasta</button>
+                <button id="saveDrawing" class="btn-primary">Salvesta galeriisse</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="canvas-area">
+        <canvas id="paintCanvas"></canvas>
+    </main>
+
+    <section class="gallery-container">
+        <div class="gallery-header">
+            <h2>Minu galerii</h2>
+            <button id="clearGallery" class="btn-danger">Kustuta kõik</button>
+        </div>
+        <div id="gallery" class="gallery-grid">
+            </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
